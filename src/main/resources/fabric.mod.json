@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "mms_vanity",
+  "version": "${version}",
+  "name": "MMS Vanity",
+  "description": "The MMS vanity subsystem: the /vanity command, vanity kits, and the Clothing of the Lowlands and Weaver's Paradise cosmetic armour sets.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "info.mudbourn.mmsvanity.MmsVanity"
+    ],
+    "client": [
+      "info.mudbourn.mmsvanity.client.MmsVanityClient"
+    ]
+  },
+  "mixins": [
+    "mms_vanity.lowlands.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "mms_render_common": "*"
+  }
+}

@@ -1,0 +1,15 @@
+.gradle/
+build/
+run/
+
+.DS_Store
+*.pem
+*.log
+*.txt
+*.md
+!README.md
+!docs/*.md
+
+.*
+!ATTRIBUTION.md
+!NOTICE

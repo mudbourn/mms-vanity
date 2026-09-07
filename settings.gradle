@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// mms-vanity depends on mms-render-common; a composite build wires the sibling
+// source tree in directly, so an edit upstream rebuilds here without a jar copy.
+includeBuild '../mms-render-common'
