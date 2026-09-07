@@ -10,6 +10,5 @@ run/
 !README.md
 !docs/*.md
 
-.*
 !ATTRIBUTION.md
 !NOTICE
