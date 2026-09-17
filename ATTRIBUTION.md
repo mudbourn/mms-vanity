@@ -19,8 +19,13 @@ only. See the carve-out at the end of `LICENSE`.
 Only geometry (Java model code) ships in this repository. Textures are not
 bundled here; they are delivered by the resource pack, not by this mod.
 
-## Weaver's Paradise
+## Weaver's Paradise (Vortianski)
 
-The Weaver's Paradise vanity sets are credited to their respective author(s) and
-are used on the same non-commercial, attribution-required, no-redistribution
-basis.
+The Weaver's Paradise vanity sets carry model geometry derived from
+**"Weaver's Paradise"** by **Vortianski**
+(<https://github.com/Vortianski/Weavers-Paradise>), which the project declares as
+MIT. Visible attribution to Vortianski is required, and the sets are used here on
+the same non-commercial, attribution-required basis as the rest of this mod.
+
+As with the Lowlands sets, only geometry (Java model code) ships here; textures
+are delivered by the resource pack, not bundled in this repository.

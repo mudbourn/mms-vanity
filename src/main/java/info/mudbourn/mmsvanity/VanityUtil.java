@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.ItemLore;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +22,10 @@ import java.util.List;
 public class VanityUtil {
 
     public static void applyVanity(ItemStack stack) {
+        applyVanity(stack, List.of());
+    }
+
+    public static void applyVanity(ItemStack stack, List<Component> credit) {
         // The machine-readable marker. Everything else here removes an effect; this
         // one exists for the few that cannot be removed and have to be gated instead.
         // See VanityMarker for when that is legitimate.
@@ -29,10 +34,11 @@ public class VanityUtil {
         // Unbreakable (Unit marker component)
         stack.set(DataComponents.UNBREAKABLE, Unit.INSTANCE);
 
-        // Lore marker
-        stack.set(DataComponents.LORE, new ItemLore(
-            List.of(Component.literal("(Vanity)").withStyle(style -> style.withColor(0xAAAAAA).withItalic(true)))
-        ));
+        // Lore marker, plus any asset-attribution lines the caller supplied
+        List<Component> lore = new ArrayList<>();
+        lore.add(Component.literal("(Vanity)").withStyle(style -> style.withColor(0xAAAAAA).withItalic(true)));
+        lore.addAll(credit);
+        stack.set(DataComponents.LORE, new ItemLore(List.copyOf(lore)));
 
         // Zero out armor attributes \u2014 replaces the item's default modifiers wholesale
         ItemAttributeModifiers modifiers = ItemAttributeModifiers.builder()

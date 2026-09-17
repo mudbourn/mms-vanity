@@ -282,7 +282,7 @@ public final class VanityKits {
 
             ItemStack stack = new ItemStack(item.get());
             applySkin(stack, piece);
-            VanityUtil.applyVanity(stack);
+            VanityUtil.applyVanity(stack, credit(piece));
 
             if (!player.getInventory().add(stack)) {
                 player.drop(stack, false);
@@ -315,6 +315,32 @@ public final class VanityKits {
             // have no tint layer so it would not show, but drop it so the stack is clean.
             stack.remove(DataComponents.DYED_COLOR);
         }
+    }
+
+    /**
+     * Per-source asset attribution shown in the item tooltip, keyed by the namespace
+     * that supplies the equipment asset and item model. This is the in-game half of
+     * the credit Anton_Vaedak's terms require: the Lowlands sets carry a visible label
+     * naming the mod and author, the way a modded item's tooltip overrides "Minecraft".
+     * See ATTRIBUTION.md for the full terms.
+     */
+    private static final Map<String, Component> ASSET_CREDIT = Map.of(
+        "lowlands_clothing", creditLine("Clothing of the Lowlands by Anton_Vaedak"),
+        "weaversparadise", creditLine("Weaver's Paradise by Vortianski")
+    );
+
+    private static Component creditLine(String text) {
+        return Component.literal(text).withStyle(style -> style.withColor(0x5555FF).withItalic(true));
+    }
+
+    /** The attribution lore lines for a piece, keyed by its asset or item-model namespace. */
+    private static List<Component> credit(Piece piece) {
+        String source = piece.assetId() != null ? piece.assetId() : piece.itemModel();
+        if (source == null) return List.of();
+        Identifier id = Identifier.tryParse(source);
+        if (id == null) return List.of();
+        Component line = ASSET_CREDIT.get(id.getNamespace());
+        return line == null ? List.of() : List.of(line);
     }
 
     private static Optional<Item> resolve(String id) {
