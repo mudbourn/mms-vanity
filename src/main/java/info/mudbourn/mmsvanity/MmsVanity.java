@@ -12,6 +12,7 @@ public class MmsVanity implements ModInitializer {
     @Override
     public void onInitialize() {
         VanityMarker.register();
+        VanitySources.validate(LOG);
         // /vanity command (permission level 0 -- public)
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
             VanityCommand.register(dispatcher));

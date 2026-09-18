@@ -39,7 +39,10 @@ terms:
   credit is provided via item tooltips (stamped by the vanity mod) and here.
 - Non-commercial only. This pack, and the server and modpack it ships with, must
   not be monetized.
-- No onward redistribution. These assets are private to this modpack: they are
+- No third-party redistribution. The author's condition: any use of the assets
+  that can be tracked down to redistributed assets from the server "will not be
+  tolerated." These assets travel only inside this project's own modpack: they are
   git-ignored (see the repo `.gitignore`), are not published to packwiz, Modrinth
   or any other index, and must not be repackaged or redistributed by third
-  parties.
+  parties. Publishing them as a standalone download is a distribution form the
+  grant does not cover.
