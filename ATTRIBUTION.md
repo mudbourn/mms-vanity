@@ -62,9 +62,10 @@ sets are used here on the same non-commercial, attribution-required basis as the
 rest of this project.
 
 MIT requires the copyright notice to travel with redistributed copies, and there
-is no such notice upstream to copy. The canonical line must be obtained from
-Vortianski and recorded before this source is distributed apart from the modpack.
-Until then its `VanitySources` row carries a pending marker.
+is no such notice upstream to copy. This project supplies one at
+`resourcepacks/lowlands-vanity/assets/weaversparadise/LICENSE`: the standard MIT
+terms with the copyright attributed to Vortianski, so a notice travels with the
+copies. Its `VanitySources` row points at that file.
 
 ## Adding a future port
 

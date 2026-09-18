@@ -16,14 +16,16 @@ Unmodified apart from being renamed to the equipment-asset ids and moved into th
 
 Sets used: Astolfo, Bridget, Felix, Gabriel, Giselle, Griffith, Mikkela, Niko.
 
-**Licence, as far as it can be established:** the project declares `mod_license=MIT`
-in `gradle.properties`, and Modrinth lists it as MIT. The repository ships **no
-`LICENSE` file** - the only licence text in it is `TEMPLATE_LICENSE.txt`, which is
-NeoForged's MDK boilerplate and covers the template files, not this mod's assets.
+**Licence:** the project declares `mod_license=MIT` in `gradle.properties`, and
+Modrinth lists it as MIT. The repository ships **no `LICENSE` file** - the only
+licence text in it is `TEMPLATE_LICENSE.txt`, which is NeoForged's MDK boilerplate
+and covers the template files, not this mod's assets.
 
 MIT requires the copyright notice to travel with redistributed copies, and there is
-no notice upstream to copy. Ask Vortianski for the canonical line and paste it here
-before this pack is published anywhere. Nothing has been invented in its place.
+none upstream to copy. This pack supplies one at `assets/weaversparadise/LICENSE`:
+the standard MIT terms with the copyright attributed to Vortianski (2025-2026, from
+the upstream repository's own history), so a notice travels with these copies as
+MIT requires.
 
 ## Clothing of the Lowlands - `assets/lowlands_clothing/`
 

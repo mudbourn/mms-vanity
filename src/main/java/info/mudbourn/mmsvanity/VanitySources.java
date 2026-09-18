@@ -75,9 +75,8 @@ public final class VanitySources {
             null
         ));
 
-        // MIT, but the upstream repository ships no copyright notice to carry. The
-        // canonical line must be obtained from Vortianski before this source is
-        // distributed apart from the modpack. See resourcepacks ATTRIBUTION.md.
+        // MIT. Upstream ships no copyright notice, so this project supplies one at
+        // assets/weaversparadise/LICENSE in the pack, which travels with the copies.
         put(new Source(
             "weaversparadise",
             "Weaver's Paradise",
@@ -85,7 +84,7 @@ public final class VanitySources {
             "MIT",
             true,
             true,
-            "PENDING: canonical MIT copyright line from Vortianski"
+            "assets/weaversparadise/LICENSE"
         ));
     }
 
