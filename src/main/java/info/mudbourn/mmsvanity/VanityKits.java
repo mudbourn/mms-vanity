@@ -323,9 +323,7 @@ public final class VanityKits {
         if (source == null) return List.of();
         Identifier id = Identifier.tryParse(source);
         if (id == null) return List.of();
-        return VanitySources.creditFor(id.getNamespace())
-            .map(List::of)
-            .orElse(List.of());
+        return VanitySources.creditFor(id.getNamespace());
     }
 
     private static Optional<Item> resolve(String id) {
