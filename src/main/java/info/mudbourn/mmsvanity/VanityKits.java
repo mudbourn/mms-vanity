@@ -326,6 +326,33 @@ public final class VanityKits {
         return VanitySources.creditFor(id.getNamespace());
     }
 
+    /**
+     * The attribution lore lines for an already-built stack, for the held-item
+     * {@code /vanity} path that has no {@link Piece} to key off. Reads the same
+     * namespaces a kit skin stamps on, in the order they best identify a source: the
+     * item model, then the worn asset, then the item's own registry id.
+     */
+    public static List<Component> creditFor(ItemStack stack) {
+        for (String namespace : sourceNamespaces(stack)) {
+            List<Component> lines = VanitySources.creditFor(namespace);
+            if (!lines.isEmpty()) return lines;
+        }
+        return List.of();
+    }
+
+    /** The candidate source namespaces of a stack, most specific first. */
+    private static List<String> sourceNamespaces(ItemStack stack) {
+        List<String> namespaces = new ArrayList<>();
+        Identifier itemModel = stack.get(DataComponents.ITEM_MODEL);
+        if (itemModel != null) namespaces.add(itemModel.getNamespace());
+        Equippable equippable = stack.get(DataComponents.EQUIPPABLE);
+        if (equippable != null && equippable.assetId().isPresent()) {
+            namespaces.add(equippable.assetId().get().identifier().getNamespace());
+        }
+        namespaces.add(BuiltInRegistries.ITEM.getKey(stack.getItem()).getNamespace());
+        return namespaces;
+    }
+
     private static Optional<Item> resolve(String id) {
         Identifier key = Identifier.tryParse(id);
         if (key == null) return Optional.empty();

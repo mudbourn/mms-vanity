@@ -44,7 +44,7 @@ public final class VanityCommand {
                     return 0;
                 }
 
-                VanityUtil.applyVanity(stack);
+                VanityUtil.applyVanity(stack, VanityKits.creditFor(stack));
                 ctx.getSource().sendSuccess(() ->
                     Component.literal("§7Item made §evanity§7 (cosmetic, no stats, no enchants, unbreakable)"), false);
                 return 1;
