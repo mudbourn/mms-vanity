@@ -12,10 +12,11 @@ public class MmsVanity implements ModInitializer {
     @Override
     public void onInitialize() {
         VanityMarker.register();
+        VanityKitItem.register();
         VanitySources.validate(LOG);
-        // /vanity command (permission level 0 -- public)
+        // /vanity command (public; /vanity kit is gamemaster-only)
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
             VanityCommand.register(dispatcher));
-        LOG.info("MMS Vanity loaded -- /vanity, vanity kits, Lowlands and Weaver's sets.");
+        LOG.info("MMS Vanity loaded -- /vanity, vanity kits, Lowlands, Weaver's and Armor of the Ages sets.");
     }
 }

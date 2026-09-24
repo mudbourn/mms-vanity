@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "mms_vanity:kit_present",
+    "present": {
+      "type": "minecraft:model",
+      "model": "mms_vanity:item/vanity_kit"
+    }
+  }
+}

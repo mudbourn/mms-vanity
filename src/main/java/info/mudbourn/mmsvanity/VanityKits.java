@@ -143,11 +143,14 @@ public final class VanityKits {
         // The turtle helmet is not listed here: it is the head slot of the
         // turtle_armor kit below, which supersedes the shell-only kit this used to be.
 
-        // ── Clothing of the Lowlands (resource-pack skins) ───────────────────
+        // Clothing of the Lowlands resource-pack skins.
         LowlandsVanity.register();
 
-        // ── Weavers Paradise (resource-pack skins) ───────────────────────────
+        // Weavers Paradise resource-pack skins.
         WeaversVanity.register();
+
+        // Armor of the Ages resource-pack skins.
+        ArmorOfTheAgesVanity.register();
 
         // ── Curated cross-mod kits ───────────────────────────────────────────
         // Themed sets whose pieces come from several mods, or from items that are
@@ -351,6 +354,11 @@ public final class VanityKits {
         }
         namespaces.add(BuiltInRegistries.ITEM.getKey(stack.getItem()).getNamespace());
         return namespaces;
+    }
+
+    /** True if at least one piece of {@code kit} exists in the current modset. */
+    public static boolean available(Kit kit) {
+        return kit.pieces().stream().anyMatch(piece -> resolve(piece.itemId()).isPresent());
     }
 
     private static Optional<Item> resolve(String id) {

@@ -67,6 +67,16 @@ is no such notice upstream to copy. This project supplies one at
 terms with the copyright attributed to Vortianski, so a notice travels with the
 copies. Its `VanitySources` row points at that file.
 
+## Armor of the Ages (Poulpinou and TheGoldenWorld)
+
+The Armor of the Ages sets carry textures from **"Armor of the Ages"** by
+**Poulpinou and TheGoldenWorld** (<https://modrinth.com/mod/armor-of-the-ages>),
+which declares MIT in its `fabric.mod.json`. The pack's geo and animation files
+are generated from that mod's Java model code. A notice travels with the copies at
+`resourcepacks/lowlands-vanity/assets/armoroftheages/LICENSE`, and the
+`VanitySources` row supplies the in-game credit. Patreon-tier skins (silver,
+amethyst, crystal) are not ported.
+
 ## Adding a future port
 
 When a future set repacks another author's assets:

@@ -58,6 +58,7 @@ public final class VanityCommand {
                 })
             )
             .then(Commands.literal("kit")
+                .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
                 .then(Commands.argument("kit", StringArgumentType.word())
                     .suggests((ctx, builder) ->
                         SharedSuggestionProvider.suggest(VanityKits.KITS.keySet(), builder))

@@ -1,0 +1,485 @@
+{
+  "namespace": "armoroftheages",
+  "helpers": [
+    "client/models/ArmorModel.java"
+  ],
+  "sets": {
+    "anubis_armor": {
+      "slots": {
+        "head": "client/models/anubis_armor/HeadAnubisArmorModel.java",
+        "chest": "client/models/anubis_armor/ChestAnubisArmorModel.java",
+        "legs": "client/models/anubis_armor/LegsAnubisArmorModel.java",
+        "feet": "client/models/anubis_armor/FeetAnubisArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}anubis_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}anubis_armor_slim.png",
+      "animations": {
+        "head": {
+          "earRight": {
+            "relative": true,
+            "x_rot": "0.1 * sinpi(age / 35)"
+          },
+          "earLeft": {
+            "relative": true,
+            "x_rot": "0.1 * sinpi(age / 35)"
+          },
+          "ribbonRight": {
+            "z_rot": "0.05 * sinpi((age - 15) / 50)"
+          },
+          "ribbonLeft": {
+            "z_rot": "-0.05 * sinpi((age - 15) / 50)"
+          }
+        },
+        "chest": {
+          "collar_back": {
+            "x_rot": "-1.5708 + 0.08 * (1 + sinpi(age / 40))"
+          },
+          "cross_a": {
+            "x": "(8.5 + 2 * sinpi(age / 40)) * cospi(2 * 0.5 * (age) / 40)",
+            "y": "30 + (8.5 + 2 * sinpi((age + 10) / 30)) * sinpi(2 * -0.5 * (age) / 40)"
+          },
+          "cross_b": {
+            "x": "(8 + 2 * sinpi(age / 70)) * cospi(2 * 0.45 * (age + 5) / 40)",
+            "y": "30 + (8 + 2 * sinpi((age + 10) / 40)) * sinpi(2 * 0.45 * (age + 25) / 40)"
+          },
+          "cross_c": {
+            "x": "(9 + 2 * sinpi((age + 25) / 30)) * cospi(2 * 0.55 * (age + 25) / 40)",
+            "y": "30 + (9 + 2 * sinpi((age + 5) / 50)) * sinpi(2 * 0.55 * (age + 30) / 40)"
+          },
+          "cross_d": {
+            "x": "(8 + 2 * sinpi((age + 30) / 80)) * cospi(2 * 0.42 * (age + 20) / 40)",
+            "y": "30 + (8 + 2 * sinpi(age / 50)) * sinpi(2 * 0.42 * (age + 20) / 40)"
+          }
+        },
+        "legs": {
+          "ribbonLegs": {
+            "x_rot": "-abs(0.05 + 1.02 * right_leg.x_rot) + 0.05 * (1 + sinpi(age / 40))"
+          }
+        }
+      }
+    },
+    "centurion_armor": {
+      "slots": {
+        "head": "client/models/centurion_armor/HeadCenturionArmorModel.java",
+        "chest": "client/models/centurion_armor/ChestCenturionArmorModel.java",
+        "legs": "client/models/centurion_armor/LegsCenturionArmorModel.java",
+        "feet": "client/models/centurion_armor/FeetCenturionArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}centurion_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}centurion_armor_slim.png"
+    },
+    "exalted_aurum_armor": {
+      "slots": {
+        "head": "client/models/exalted_aurum/HeadExaltedAurumArmorModel.java",
+        "chest": "client/models/exalted_aurum/ChestExaltedAurumArmorModel.java",
+        "legs": "client/models/exalted_aurum/LegsExaltedAurumArmorModel.java",
+        "feet": "client/models/exalted_aurum/FeetExaltedAurumArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}exalted_aurum_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}exalted_aurum_armor_slim.png",
+      "animations": {
+        "chest": {
+          "ring": {
+            "y": "-13 + sinpi(age / 60)",
+            "z_rot": "0.1 * sinpi(age / 60 + 0.5)"
+          },
+          "left_hang": {
+            "z_rot": "0.4 * sinpi(age / 60 + 0.9)"
+          },
+          "left_deco": {
+            "z_rot": "0.5 * sinpi(age / 60 + 1.4)"
+          },
+          "right_hang": {
+            "z_rot": "0.4 * sinpi(age / 60 + 1.0)"
+          },
+          "right_deco": {
+            "z_rot": "0.5 * sinpi(age / 60 + 1.5)"
+          },
+          "mid_hang": {
+            "z_rot": "0.4 * sinpi(age / 60 + 0.8)"
+          },
+          "mid_deco": {
+            "z_rot": "0.5 * sinpi(age / 60 + 1.3)"
+          }
+        },
+        "legs": {
+          "belt_back": {
+            "x_rot": "abs(right_leg.x_rot) + riding"
+          },
+          "belt_front": {
+            "x_rot": "-abs(right_leg.x_rot) - riding"
+          }
+        }
+      }
+    },
+    "holy_armor": {
+      "slots": {
+        "head": "client/models/holy_armor/HeadHolyArmorModel.java",
+        "chest": "client/models/holy_armor/ChestHolyArmorModel.java",
+        "legs": "client/models/holy_armor/LegsHolyArmorModel.java",
+        "feet": "client/models/holy_armor/FeetHolyArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}holy_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}holy_armor_slim.png",
+      "animations": {
+        "head": {
+          "headWingLeft": {
+            "x_rot": "0.3491 + 0.15 * sinpi(age / 40)"
+          },
+          "headWingRight": {
+            "x_rot": "0.3491 + 0.15 * sinpi(age / 40)"
+          }
+        },
+        "chest": {
+          "chestEffectFrontA": {
+            "z_rot": "mod(age / 40, 2 * pi)"
+          },
+          "chestEffectFrontB": {
+            "z_rot": "mod(age / 40 + pi / 4, 2 * pi)"
+          },
+          "chestEffectMiddle": {
+            "z_rot": "mod(age / 40, 2 * pi)",
+            "y": "(0.06 * sinpi(age / 80))"
+          },
+          "chestEffectMiddleRotated": {
+            "z_rot": "mod(age / 40 + pi / 4, 2 * pi)",
+            "y": "(0.06 * sinpi(age / 80))"
+          },
+          "armLeftEffect": {
+            "x_rot": "-mod(age / 40, 2 * pi)"
+          },
+          "armLeftEffectRotated": {
+            "x_rot": "-mod(age / 40 + pi / 4, 2 * pi)"
+          },
+          "armRightEffect": {
+            "x_rot": "-mod(age / 40, 2 * pi)"
+          },
+          "armRightEffectRotated": {
+            "x_rot": "-mod(age / 40 + pi / 4, 2 * pi)"
+          },
+          "armLeftWing": {
+            "x_rot": "0.1745 + 0.1 * sinpi(age / 40)"
+          },
+          "armRightWing": {
+            "x_rot": "0.1745 + 0.1 * sinpi(age / 40)"
+          },
+          "chestEffectBig": {
+            "y": "(0.06 * sinpi(age / 80))"
+          },
+          "chestEffectSmall": {
+            "y": "(0.06 * sinpi(age / 80))",
+            "z_rot": "-mod(age / 20, 2 * pi)"
+          },
+          "chestEffectSmallRotated": {
+            "y": "(0.06 * sinpi(age / 80))",
+            "z_rot": "-mod(age / 20 + pi / 4, 2 * pi)"
+          }
+        },
+        "feet": {
+          "leg_left_wing": {
+            "x_rot": "-0.1745 + 0.1 * sinpi(age / 40)"
+          },
+          "leg_right_wing": {
+            "x_rot": "-0.1745 + 0.1 * sinpi(age / 40)"
+          }
+        }
+      }
+    },
+    "iron_plate_armor": {
+      "slots": {
+        "head": "client/models/iron_plate_armor/HeadIronPlateArmorModel.java",
+        "chest": "client/models/iron_plate_armor/ChestIronPlateArmorModel.java",
+        "legs": "client/models/iron_plate_armor/LegsIronPlateArmorModel.java",
+        "feet": "client/models/iron_plate_armor/FeetIronPlateArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}iron_plate_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}iron_plate_armor_slim.png",
+      "skins": [
+        "",
+        "ashes_"
+      ],
+      "animations": {
+        "head": {
+          "middleFeatherA": {
+            "x_rot": "-0.15 - abs(right_leg.x_rot) * 0.1 + 0.05 * sinpi(age / 60 + 1)"
+          },
+          "middleFeatherB": {
+            "x_rot": "-0.15 - abs(right_leg.x_rot) * 0.1 + 0.1 * sinpi((age - 15) / 60 + 1)"
+          }
+        },
+        "chest": {
+          "miscA": {
+            "x_rot": "0.05 + 0.05 * sinpi(age / 60 + 1) + riding + (crouching ? -0.18 : abs(right_leg.x_rot))"
+          }
+        },
+        "legs": {
+          "miscB": {
+            "x_rot": "-(abs(right_leg.x_rot) + 0.05 * sinpi(age / 60 + 1)) - riding",
+            "y": "12.1"
+          },
+          "beltA": {
+            "y": "0"
+          },
+          "beltB": {
+            "y": "0"
+          }
+        }
+      }
+    },
+    "japanese_light_armor": {
+      "slots": {
+        "head": "client/models/japanese_light_armor/HeadJapaneseLightArmorModel.java",
+        "chest": "client/models/japanese_light_armor/ChestJapaneseLightArmorModel.java",
+        "legs": "client/models/japanese_light_armor/LegsJapaneseLightArmorModel.java",
+        "feet": "client/models/japanese_light_armor/FeetJapaneseLightArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}japanese_light_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}japanese_light_armor_slim.png",
+      "animations": {
+        "head": {
+          "ribbonA": {
+            "x_rot": "max(0.35 + (0.3 * sinpi(age / 60 + 1) + abs(right_leg.x_rot)) * 0.15 - head.x_rot, 0.2)",
+            "z_rot": "-0.1 + (0.3 * sinpi(age / 60 + 1) + abs(right_leg.x_rot)) * 0.2"
+          },
+          "ribbonB": {
+            "x_rot": "max(0.175 + (0.3 * sinpi(age / 60 + 1) + abs(right_leg.x_rot)) * 0.1 - head.x_rot, 0.075)",
+            "z_rot": "-(0.3 * sinpi(age / 60 + 1) + abs(right_leg.x_rot)) * 0.2"
+          }
+        }
+      }
+    },
+    "o_yoroi_armor": {
+      "slots": {
+        "head": "client/models/o_yoroi_armor/HeadOYoroiArmorModel.java",
+        "chest": "client/models/o_yoroi_armor/ChestOYoroiArmorModel.java",
+        "legs": "client/models/o_yoroi_armor/LegsOYoroiArmorModel.java",
+        "feet": "client/models/o_yoroi_armor/FeetOYoroiArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}o_yoroi_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}o_yoroi_armor_slim.png",
+      "skins": [
+        "",
+        "amber_",
+        "nightblue_",
+        "dusk_",
+        "ink_",
+        "jade_",
+        "pinky_"
+      ],
+      "animations": {
+        "legs": {
+          "thighBack": {
+            "x_rot": "abs(right_leg.x_rot) + riding"
+          },
+          "thighBackSub": {
+            "x_rot": "abs(right_leg.x_rot) + riding"
+          },
+          "thighFront": {
+            "x_rot": "-abs(right_leg.x_rot) - riding",
+            "y": "11"
+          },
+          "thighFrontSub": {
+            "x_rot": "-abs(right_leg.x_rot) - riding",
+            "y": "11"
+          }
+        }
+      }
+    },
+    "pharaoh_armor": {
+      "slots": {
+        "head": "client/models/pharaoh_armor/HeadPharaohArmorModel.java",
+        "chest": "client/models/pharaoh_armor/ChestPharaohArmorModel.java",
+        "legs": "client/models/pharaoh_armor/LegsPharaohArmorModel.java",
+        "feet": "client/models/pharaoh_armor/FeetPharaohArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}pharaoh_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}pharaoh_armor_slim.png",
+      "animations": {
+        "head": {
+          "headTail": {
+            "x_rot": "sinpi(age / 60 + 1) * 0.05 - head.x_rot * 0.8",
+            "z_rot": "(0.3 * sinpi(age / 60 + 1) + right_leg.x_rot) * 0.1"
+          }
+        },
+        "legs": {
+          "bodyGoldenStrip": {
+            "x_rot": "abs(right_leg.x_rot) - riding",
+            "y": "10"
+          },
+          "bodyJewel": {
+            "y": "10"
+          }
+        }
+      }
+    },
+    "quetzalcoatl_armor": {
+      "slots": {
+        "head": "client/models/quetzalcoatl_armor/HeadQuetzalcoatlArmorModel.java",
+        "chest": "client/models/quetzalcoatl_armor/ChestQuetzalcoatlArmorModel.java",
+        "legs": "client/models/quetzalcoatl_armor/LegsQuetzalcoatlArmorModel.java",
+        "feet": "client/models/quetzalcoatl_armor/FeetQuetzalcoatlArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}quetzalcoatl_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}quetzalcoatl_armor_slim.png",
+      "animations": {
+        "head": {
+          "featherCrownLeft": {
+            "x_rot": "-0.4363 + 0.1 * sinpi(age / 40)"
+          },
+          "featherCrownRight": {
+            "x_rot": "-0.4363 + 0.1 * sinpi(age / 40)"
+          },
+          "featherCrownMiddle": {
+            "x_rot": "-0.4363 + 0.1 * sinpi(age / 40)"
+          }
+        },
+        "chest": {
+          "tail": {
+            "x_rot": "right_arm.x_rot < 0 ? right_arm.x_rot : right_arm.x_rot * 0.1",
+            "z_rot": "0.2182 + 0.1 * sinpi(age / 40)"
+          },
+          "tailTip": {
+            "z_rot": "0.1 * sinpi((age - 15) / 40)"
+          },
+          "armFeather": {
+            "x_rot": "0.1 * sinpi((age - 15) / 40)",
+            "z_rot": "-0.05 * sinpi((age - 15) / 40)"
+          },
+          "neckStart": {
+            "x_rot": "-0.3 + 0.2 * sinpi(age / 40)",
+            "z_rot": "0.2 + 0.04 * sinpi((age - 15) / 40)"
+          },
+          "neckEnd": {
+            "x_rot": "0.6 + 0.1 * sinpi((age - 15) / 40)"
+          },
+          "snakeHead": {
+            "x_rot": "-0.2 * sinpi((age - 15) / 40) + 0.02 * head_pitch",
+            "y_rot": "0.02 * head_yaw"
+          },
+          "jow": {
+            "x_rot": "0.13 + 0.1 * sinpi(age / 40)"
+          },
+          "snakeCrownRight": {
+            "y_rot": "0.3378 + 0.1 * sinpi((age - 15) / 40)"
+          },
+          "snakeCrownLeft": {
+            "y_rot": "0.3378 - 0.1 * sinpi((age - 15) / 40)"
+          }
+        },
+        "legs": {
+          "underwearFront": {
+            "x_rot": "-(abs(0.05 + 1.02 * right_leg.x_rot) + 0.05 * (1 + sinpi(age / 40)))"
+          },
+          "underwearBack": {
+            "x_rot": "(abs(0.05 + 1.02 * right_leg.x_rot) + 0.05 * (1 + sinpi(age / 40)))"
+          }
+        },
+        "feet": {
+          "legFeatherRight": {
+            "x_rot": "-0.7931 + 0.2 * sinpi((age + 10) / 40)"
+          },
+          "legFeatherLeft": {
+            "x_rot": "-0.7931 + 0.2 * sinpi((age + 10) / 40)"
+          }
+        }
+      }
+    },
+    "raijin_armor": {
+      "slots": {
+        "head": "client/models/raijin_armor/HeadRaijinArmorModel.java",
+        "chest": "client/models/raijin_armor/ChestRaijinArmorModel.java",
+        "legs": "client/models/raijin_armor/LegsRaijinArmorModel.java",
+        "feet": "client/models/raijin_armor/FeetRaijinArmorModel.java"
+      },
+      "slim_method": "createSlimLayerDefinition",
+      "texture": "armoroftheages:textures/models/armor/{skin}raijin_armor.png",
+      "slim_texture": "armoroftheages:textures/models/armor/{skin}raijin_armor_slim.png",
+      "animations": {
+        "head": {
+          "flyA": {
+            "y": "-15 + sinpi((age / 60) + 1.0)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0"
+          },
+          "flyB": {
+            "y": "-15 + sinpi((age / 60) + 1.333)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0.33"
+          },
+          "flyC": {
+            "y": "-7.5 + sinpi((age / 60) + 1.667)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0.67"
+          },
+          "flyD": {
+            "y": "-7.5 + sinpi((age / 60) + 0.333)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0.17"
+          },
+          "flyE": {
+            "y": "2 + sinpi((age / 60) + 0)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0.83"
+          },
+          "flyF": {
+            "y": "2 + sinpi((age / 60) + 0.667)",
+            "z_rot": "mod((age / 60), 2 * pi) + 0.5"
+          }
+        },
+        "chest": {
+          "chestScarfTop": {
+            "y": "-4.5 - ((0.866 - sinpi(0.333 - (0.03 * sinpi(2 * age / 60)))) * 4) * 0.75",
+            "z": "6.5 + ((0.866 - sinpi(0.333 - (0.03 * sinpi(2 * age / 60)))) * 4) * 0.8659"
+          },
+          "chestScarfRightA": {
+            "y": "((0.866 - sinpi(0.333 - (0.03 * sinpi(2 * age / 60)))) * 4) * 0.5"
+          },
+          "chestScarfRightB": {
+            "x_rot": "1.047 + (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfTopRightA": {
+            "z_rot": "-1.047 - (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfTopRightB": {
+            "z_rot": "-1.047 + 2 * (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfLeftA": {
+            "y": "((0.866 - sinpi(0.333 - (0.03 * sinpi(2 * age / 60)))) * 4) * 0.5"
+          },
+          "chestScarfLeftB": {
+            "x_rot": "1.047 + (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfTopLeftA": {
+            "z_rot": "-2.094 + (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfTopLeftB": {
+            "z_rot": "1.047 - 2 * (0.03 * sinpi(2 * age / 60)) * pi"
+          },
+          "chestScarfRightC": {
+            "x_rot": "(-0.872 + 0.03 * sinpi((age - 15) / 30) * pi)"
+          },
+          "chestScarfLeftC": {
+            "x_rot": "(-0.872 + 0.03 * sinpi((age - 15) / 30) * pi)"
+          }
+        },
+        "legs": {
+          "chestBeltHangA": {
+            "x_rot": "(left_leg.x_rot > 0 ? left_leg.x_rot * 0.5 : left_leg.x_rot) + 3 * riding",
+            "z_rot": "min(left_leg.x_rot, 0) * 0.25",
+            "y": "11.2"
+          },
+          "chestBeltHangB": {
+            "x_rot": "(left_leg.x_rot > 0 ? left_leg.x_rot * 0.5 : left_leg.x_rot) + 3 * riding",
+            "y_rot": "min(left_leg.x_rot, 0) * 0.25",
+            "z_rot": "min(left_leg.x_rot, 0) * 0.5",
+            "y": "11"
+          }
+        }
+      }
+    }
+  }
+}

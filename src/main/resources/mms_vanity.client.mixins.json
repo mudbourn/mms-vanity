@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "info.mudbourn.mmsvanity.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ItemStackRenderStateAccessor",
+    "LayerRenderStateAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

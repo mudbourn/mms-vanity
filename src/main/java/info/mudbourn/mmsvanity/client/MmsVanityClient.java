@@ -1,5 +1,6 @@
 package info.mudbourn.mmsvanity.client;
 
+import info.mudbourn.mmsvanity.client.kit.KitPresentModel;
 import info.mudbourn.mmsvanity.client.lowlands.LowlandsArmorSets;
 import net.fabricmc.api.ClientModInitializer;
 
@@ -11,5 +12,6 @@ public class MmsVanityClient implements ClientModInitializer {
         // unconditionally: the sets are keyed by equipment asset id, and a player
         // who never sees one just pays for a few unused baked models.
         LowlandsArmorSets.registerModelLayers();
+        KitPresentModel.register();
     }
 }

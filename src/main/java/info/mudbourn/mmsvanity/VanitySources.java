@@ -100,6 +100,18 @@ public final class VanitySources {
             true,
             "assets/weaversparadise/LICENSE"
         ));
+
+        // MIT per the mod's fabric.mod.json; the pack carries a notice at assets/armoroftheages/LICENSE.
+        put(new Source(
+            "armoroftheages",
+            "Armor of the Ages",
+            "Poulpinou & TheGoldenWorld",
+            "CurseForge: curseforge.com/minecraft/mc-mods/armor-of-the-ages",
+            "MIT",
+            true,
+            true,
+            "assets/armoroftheages/LICENSE"
+        ));
     }
 
     private static void put(Source source) {

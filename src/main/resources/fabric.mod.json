@@ -3,7 +3,7 @@
   "id": "mms_vanity",
   "version": "${version}",
   "name": "MMS Vanity",
-  "description": "The MMS vanity subsystem: the /vanity command, vanity kits, and the Clothing of the Lowlands and Weaver's Paradise cosmetic armour sets.",
+  "description": "The MMS vanity subsystem: the /vanity command, vanity kits, and the Clothing of the Lowlands, Weaver's Paradise and Armor of the Ages cosmetic armour sets.",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -14,7 +14,8 @@
     ]
   },
   "mixins": [
-    "mms_vanity.lowlands.mixins.json"
+    "mms_vanity.lowlands.mixins.json",
+    "mms_vanity.client.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.0",
