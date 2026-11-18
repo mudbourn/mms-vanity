@@ -1,6 +1,6 @@
 package info.mudbourn.mmsvanity.mixin.client;
 
-import net.minecraft.client.renderer.block.model.ItemTransform;
+import net.minecraft.client.resources.model.cuboid.ItemTransform;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
@@ -9,6 +9,6 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(ItemStackRenderState.LayerRenderState.class)
 public interface LayerRenderStateAccessor {
 
-    @Accessor("transform")
+    @Accessor("itemTransform")
     ItemTransform mmsVanity$transform();
 }

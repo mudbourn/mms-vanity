@@ -1,6 +1,6 @@
 package info.mudbourn.mmsvanity.client.lowlands;
 
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -163,7 +163,7 @@ public final class LowlandsArmorSets {
     /** Registers every ported set's model layer. Call once, from client init. */
     public static void registerModelLayers() {
         for (Set set : SETS.values()) {
-            EntityModelLayerRegistry.registerModelLayer(set.layer(), set.definition()::get);
+            ModelLayerRegistry.registerModelLayer(set.layer(), set.definition()::get);
         }
     }
 

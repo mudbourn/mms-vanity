@@ -1,7 +1,7 @@
 package info.mudbourn.mmsvanity;
 
 import com.mojang.serialization.Codec;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
@@ -53,7 +53,7 @@ public final class VanityKitItem extends Item {
     public static void register() {
         Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, id("kit"), KIT);
         Registry.register(BuiltInRegistries.ITEM, KEY, ITEM);
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, id("kits"), FabricItemGroup.builder()
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, id("kits"), FabricCreativeModeTab.builder()
             .title(Component.translatable("itemGroup.mms_vanity.kits"))
             .icon(() -> new ItemStack(ITEM))
             .displayItems((params, output) -> {

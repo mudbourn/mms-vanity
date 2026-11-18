@@ -6,7 +6,7 @@ import info.mudbourn.mmsvanity.VanityKitItem;
 import info.mudbourn.mmsvanity.mixin.client.ItemStackRenderStateAccessor;
 import info.mudbourn.mmsvanity.mixin.client.LayerRenderStateAccessor;
 import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.block.model.ItemTransform;
+import net.minecraft.client.resources.model.cuboid.ItemTransform;
 import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemModels;
@@ -16,6 +16,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import org.joml.Matrix4fc;
 import org.joml.Vector3f;
 import org.jspecify.annotations.Nullable;
 
@@ -66,7 +67,7 @@ public record KitPresentModel(ItemModel present) implements ItemModel {
         ItemStackRenderState.LayerRenderState[] layers = ((ItemStackRenderStateAccessor) state).mmsVanity$layers();
         for (int i = from; i < to; i++) {
             ItemTransform base = ((LayerRenderStateAccessor) layers[i]).mmsVanity$transform();
-            layers[i].setTransform(new ItemTransform(
+            layers[i].setItemTransform(new ItemTransform(
                 base.rotation(),
                 new Vector3f(base.translation()).add(offset),
                 new Vector3f(base.scale()).mul(scale)));
@@ -86,8 +87,8 @@ public record KitPresentModel(ItemModel present) implements ItemModel {
         }
 
         @Override
-        public ItemModel bake(ItemModel.BakingContext context) {
-            return new KitPresentModel(present.bake(context));
+        public ItemModel bake(ItemModel.BakingContext context, Matrix4fc transformation) {
+            return new KitPresentModel(present.bake(context, transformation));
         }
 
         @Override
