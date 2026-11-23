@@ -17,6 +17,6 @@ public class MmsVanity implements ModInitializer {
         // /vanity command (public; /vanity kit is gamemaster-only)
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
             VanityCommand.register(dispatcher));
-        LOG.info("MMS Vanity loaded -- /vanity, vanity kits, Lowlands, Weaver's and Armor of the Ages sets.");
+        LOG.info("MMS Vanity loaded -- /vanity, vanity kits, Lowlands, Weaver's, Armor of the Ages and Fantasy Armor sets.");
     }
 }

@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "package": "info.mudbourn.mmsvanity.mixin.fantasyarmor",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FantasyArmorSetEffectsMixin",
+    "FantasyArmorStackSettingsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

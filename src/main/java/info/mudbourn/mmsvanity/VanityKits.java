@@ -153,6 +153,9 @@ public final class VanityKits {
         // Armor of the Ages resource-pack skins.
         ArmorOfTheAgesVanity.register();
 
+        // Fantasy Armor, as the embargoed mod's own items.
+        FantasyArmorVanity.register();
+
         // ── Curated cross-mod kits ───────────────────────────────────────────
         // Themed sets whose pieces come from several mods, or from items that are
         // not obviously armour at all. These are the ones a player would never
