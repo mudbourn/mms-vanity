@@ -16,7 +16,9 @@
   "mixins": [
     "mms_vanity.lowlands.mixins.json",
     "mms_vanity.fantasyarmor.mixins.json",
-    "mms_vanity.client.mixins.json"
+    "mms_vanity.client.mixins.json",
+    "mms_vanity.cosmeticarmor.mixins.json",
+    "mms_vanity.firstperson.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.20.1",

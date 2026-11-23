@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "package": "info.mudbourn.mmsvanity.mixin.cosmeticarmor",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GeckoLibCosmeticSlotMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

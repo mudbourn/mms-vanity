@@ -13,5 +13,6 @@ public class MmsVanityClient implements ClientModInitializer {
         // who never sees one just pays for a few unused baked models.
         LowlandsArmorSets.registerModelLayers();
         KitPresentModel.register();
+        VanityCreditTooltip.register();
     }
 }

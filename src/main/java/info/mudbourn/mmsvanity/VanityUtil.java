@@ -34,10 +34,10 @@ public class VanityUtil {
         // Unbreakable (Unit marker component)
         stack.set(DataComponents.UNBREAKABLE, Unit.INSTANCE);
 
-        // Lore marker, plus any asset-attribution lines the caller supplied
+        // Lore marker. Asset credits are not stamped here: the client tooltip shows
+        // them behind SHIFT (VanityCreditTooltip), looked up from the stack's namespaces.
         List<Component> lore = new ArrayList<>();
         lore.add(Component.literal("(Vanity)").withStyle(style -> style.withColor(0xAAAAAA).withItalic(true)));
-        lore.addAll(credit);
         stack.set(DataComponents.LORE, new ItemLore(List.copyOf(lore)));
 
         // Zero out armor attributes \u2014 replaces the item's default modifiers wholesale

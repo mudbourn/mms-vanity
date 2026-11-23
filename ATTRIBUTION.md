@@ -3,9 +3,10 @@
 This mod ports cosmetic armour sets forward to 1.21.11. Two kinds of set exist,
 and only one carries a redistribution obligation:
 
-- Repacked sets. The look ships as textures in the `lowlands-vanity` resource
-  pack. These redistribute another author's assets, so each is used under that
-  author's terms and carries a visible in-game credit. They are listed below and
+- Repacked sets. The look ships as textures from `resourcepacks/lowlands-vanity`,
+  bundled in the mod jar. These redistribute another author's assets, so each is used under that
+  author's terms and carries an in-game credit, shown in the item tooltip while
+  SHIFT is held (the tooltip says so). They are listed below and
   in `resourcepacks/lowlands-vanity/ATTRIBUTION.md`, and are the rows in
   `VanitySources`.
 - Referenced sets. The look is drawn at runtime from a mod the player already has
@@ -13,8 +14,10 @@ and only one carries a redistribution obligation:
   Mutant Monsters, and the rest). Nothing of theirs is repacked or redistributed,
   so no asset licence attaches to this project for them.
 
-Only geometry (Java model code) ships in this repository. Textures are delivered
-by the resource pack, not bundled here.
+Geometry (Java model code) and the repacked textures both ship in the mod jar.
+The textures come from `resourcepacks/lowlands-vanity/assets`, and the jar carries
+each set's LICENSE and that folder's ATTRIBUTION.md
+(`ATTRIBUTION_assets_mms-vanity.md`).
 
 ## Project-wide terms
 

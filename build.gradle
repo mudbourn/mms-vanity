@@ -20,6 +20,8 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     // Shared render infra, wired as a composite build (see settings.gradle).
     implementation "info.mudbourn:mms-render-common:${project.render_common_version}"
+    // GeckoLib API for the first-person armor gate; not bundled, the pack installs it.
+    compileOnly files("libs/geckolib-fabric-26.3-5.5.7.jar")
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -47,6 +49,14 @@ jar {
     }
     from("ATTRIBUTION.md") {
         rename { "${it}_${project.base.archivesName.get()}" }
+    }
+    // The repacked sets' textures, models and lang ship inside the jar, with each
+    // set's LICENSE under its namespace and the pack's source notes beside them.
+    from("resourcepacks/lowlands-vanity/assets") {
+        into "assets"
+    }
+    from("resourcepacks/lowlands-vanity/ATTRIBUTION.md") {
+        rename { "ATTRIBUTION_assets_${project.base.archivesName.get()}.md" }
     }
 }
 
